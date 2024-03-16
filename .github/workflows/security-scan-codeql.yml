@@ -1,0 +1,13 @@
+name: Security scan CodeQL
+
+on:
+  push:
+    branches: [feature/*, main]
+
+jobs:
+  scan:
+    uses: thegitofdaniel/pipelines/.github/workflows/security-scan-codeql.yml@main
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
